@@ -1,0 +1,6 @@
+import React from 'react';import {Pressable,StyleSheet,Text,View,ViewStyle} from 'react-native';import {C} from './theme';
+export const Title=({children,sub}:{children:string;sub?:string})=><View style={{marginBottom:22}}><Text style={s.title}>{children}</Text>{sub&&<Text style={s.sub}>{sub}</Text>}</View>;
+export const Card=({children,style}:{children:React.ReactNode;style?:ViewStyle})=><View style={[s.card,style]}>{children}</View>;
+export const Btn=({title,onPress,secondary=false}:{title:string;onPress:()=>void;secondary?:boolean})=><Pressable onPress={onPress} style={[s.btn,secondary&&s.secondary]}><Text style={[s.btnText,secondary&&{color:C.text}]}>{title}</Text></Pressable>;
+export const Label=({children}:{children:string})=><Text style={s.label}>{children}</Text>;
+const s=StyleSheet.create({title:{fontSize:29,color:C.text,fontWeight:'700',letterSpacing:-.6},sub:{color:C.muted,fontSize:14,marginTop:8,lineHeight:21},card:{backgroundColor:C.card,borderColor:C.line,borderWidth:1,borderRadius:22,padding:18,marginBottom:13},btn:{backgroundColor:C.accent,borderRadius:16,paddingVertical:15,paddingHorizontal:18,alignItems:'center'},secondary:{backgroundColor:'rgba(255,255,255,.1)',borderColor:C.line,borderWidth:1},btnText:{fontWeight:'700',fontSize:15,color:'#10182E'},label:{fontSize:12,color:C.muted,letterSpacing:.5,marginBottom:8}});

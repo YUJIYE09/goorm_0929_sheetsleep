@@ -1,0 +1,2 @@
+export const backgrounds={night:require('../../assets/images/bg_01_deep_night.jpg'),dawn:require('../../assets/images/bg_02_dawn_commute.jpg'),day:require('../../assets/images/bg_03_blackout_day.jpg'),dusk:require('../../assets/images/bg_04_dusk_nap.jpg')};
+export const sounds={day_sleep_cover:require('../../assets/audio/day_sleep_cover.wav'),wind_down_breath:require('../../assets/audio/wind_down_breath.wav')};
